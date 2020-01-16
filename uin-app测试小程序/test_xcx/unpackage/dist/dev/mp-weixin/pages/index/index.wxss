@@ -1,3 +1,8 @@
+.uni-padding-wrap.data-v-ae528cf8,
+.swiper.data-v-ae528cf8 {
+  width: 100%;
+  height: 500rpx;
+}
 .swiper_img.data-v-ae528cf8 {
   width: 100%;
   height: 100%;

@@ -133,11 +133,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
 //
 //
 //
@@ -153,21 +149,23 @@ var _default =
 {
   data: function data() {
     return {
-      indicatorDots: true,
-      autoplay: true,
-      interval: 2000,
-      duration: 500,
-      testData: '' };
-
+      indicatorDots: true, // 是否显示面板指示点
+      circular: true, // 衔接滑动
+      autoplay: true, // 是否自动切换
+      interval: 2000, // 自动切换时间间隔
+      duration: 500, // 滑动动画时长
+      testData: '' // 接收数据
+    };
   },
   onLoad: function onLoad() {
 
   },
   onShow: function onShow() {var _this = this;
-    this.$Api(this.$Url.getGameSet, {
+    var data = {
       aa: 1,
-      bb: 22 }).
-    then(function (res) {
+      bb: 22 };
+
+    this.$Api(this.$Url.getGameSet, _objectSpread({}, data)).then(function (res) {
       _this.testData = res.data;
       console.log(_this.testData, 11111);
     }, function (error) {
